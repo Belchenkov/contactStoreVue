@@ -17,7 +17,7 @@ Route::group(['middleware' => 'api'], function () {
 
     // Add Contact
     Route::post('contact/store', function (Request $request) {
-        return Contact->create([
+        return Contact::create([
                                 'name' => $request->input(['name']),
                                 'email' => $request->input(['email']),
                                 'phone' => $request->input(['phone'])
